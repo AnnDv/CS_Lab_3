@@ -1,0 +1,56 @@
+[
+    {
+        "serial_number_custom_item": 0,
+        "type": "CMD_EXEC",
+        "description": "\"MacOS 11 is installed\"",
+        "cmd": "\"/usr/bin/sw_vers | /usr/bin/grep 'ProductVersion'\"",
+        "expect": "\"^ProductVersion[\\\\s]*:[\\\\s]*11\\\\.\""
+    },
+    {
+        "serial_number_custom_item": 1,
+        "type": "CMD_EXEC",
+        "description": "\"1.1 Verify all Apple-provided software is current\"",
+        "cmd": "\"/usr/sbin/softwareupdate -l 2>&1\"",
+        "expect": "\"No new software available\"",
+        "info": "\"Software vendors release security patches and software updates for their products when security vulnerabilities are discovered. There is no simple way to complete this action without a network connection to an Apple software repository. Please ensure appropriate access for this control. This check is only for what Apple provides through software update.",
+        "reference": "\"800-171|3.14.1,800-53|SI-2c.,CIS_Recommendation|1.1,CN-L3|8.1.4.4(e),CN-L3|8.1.10.5(a),CN-L3|8.1.10.5(b),CN-L3|8.5.4.1(b),CN-L3|8.5.4.1(d),CN-L3|8.5.4.1(e),CSCv7|3.4,CSCv7|3.5,CSF|ID.RA-1,CSF|PR.IP-12,ITSG-33|SI-2,LEVEL|1A,NESA|T7.6.2,NESA|T7.7.1,NIAv2|AM38,NIAv2|AM39,NIAv2|SS14b,QCSC-v1|11.2,SWIFT-CSCv1|2.2\"",
+        "solution": "\"Perform the following to install all available software updates:",
+        "see_also": "\"https://workbench.cisecurity.org/files/3425\""
+    },
+    {
+        "serial_number_custom_item": 2,
+        "type": "MACOSX_DEFAULTS_READ",
+        "description": "\"1.2 Enable Auto Update\"",
+        "regex": "\"1\"",
+        "plist_item": "\"AutomaticCheckEnabled\"",
+        "plist_option": "CANNOT_BE_NULL",
+        "info": "\"Auto Update verifies that your system has the newest security patches and software updates. If 'Automatically check for updates' is not selected background updates for new malware definition files from Apple for XProtect and Gatekeeper will not occur.",
+        "reference": "\"800-171|3.14.1,800-53|SI-2(5),CIS_Recommendation|1.2,CN-L3|8.1.4.4(e),CN-L3|8.1.10.5(a),CN-L3|8.1.10.5(b),CN-L3|8.5.4.1(b),CN-L3|8.5.4.1(d),CN-L3|8.5.4.1(e),CSCv7|3.4,CSCv7|3.5,CSF|ID.RA-1,CSF|PR.IP-12,ITSG-33|SI-2,LEVEL|1A,NESA|T7.6.2,NESA|T7.7.1,NIAv2|NS26b,QCSC-v1|11.2,SWIFT-CSCv1|2.2\"",
+        "solution": "\"Perform the following to enable the system to automatically check for updates:",
+        "see_also": "\"https://workbench.cisecurity.org/files/3425\""
+    },
+    {
+        "serial_number_custom_item": 3,
+        "type": "MACOSX_DEFAULTS_READ",
+        "description": "\"1.3 Enable Download new updates when available\"",
+        "regex": "\"1\"",
+        "plist_item": "\"AutomaticDownload\"",
+        "plist_option": "CANNOT_BE_NULL",
+        "info": "\"In the GUI both 'Install macOS updates' and 'Install app updates from the App Store' are dependent on whether 'Download new updates when available' is selected.",
+        "reference": "\"800-171|3.14.1,800-53|SI-2(5),CIS_Recommendation|1.3,CN-L3|8.1.4.4(e),CN-L3|8.1.10.5(a),CN-L3|8.1.10.5(b),CN-L3|8.5.4.1(b),CN-L3|8.5.4.1(d),CN-L3|8.5.4.1(e),CSCv7|3.4,CSCv7|3.5,CSF|ID.RA-1,CSF|PR.IP-12,ITSG-33|SI-2,LEVEL|1A,NESA|T7.6.2,NESA|T7.7.1,NIAv2|NS26b,QCSC-v1|11.2,SWIFT-CSCv1|2.2\"",
+        "solution": "\"Perform the following to enable the system to automatically check for updates:",
+        "see_also": "\"https://workbench.cisecurity.org/files/3425\""
+    },
+    {
+        "serial_number_custom_item": 4,
+        "type": "MACOSX_DEFAULTS_READ",
+        "description": "\"1.4 Enable app update installs\"",
+        "regex": "\"1\"",
+        "plist_item": "\"AutoUpdate\"",
+        "plist_option": "CANNOT_BE_NULL",
+        "info": "\"Ensure that application updates are installed after they are available from Apple. These updates do not require reboots or admin privileges for end users.",
+        "reference": "\"800-171|3.14.1,800-53|SI-2(5),CIS_Recommendation|1.4,CN-L3|8.1.4.4(e),CN-L3|8.1.10.5(a),CN-L3|8.1.10.5(b),CN-L3|8.5.4.1(b),CN-L3|8.5.4.1(d),CN-L3|8.5.4.1(e),CSCv7|3.4,CSCv7|3.5,CSF|ID.RA-1,CSF|PR.IP-12,ITSG-33|SI-2,LEVEL|1A,NESA|T7.6.2,NESA|T7.7.1,NIAv2|NS26b,QCSC-v1|11.2,SWIFT-CSCv1|2.2\"",
+        "solution": "\"Perform the following to enable App Store updates to install automatically:",
+        "see_also": "\"https://workbench.cisecurity.org/files/3425\""
+    }
+]

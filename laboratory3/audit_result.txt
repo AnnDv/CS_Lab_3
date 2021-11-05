@@ -1,0 +1,7 @@
+MacOS 11 is installed						Invalid
+Expected : ^ProductVersion[\\s]*:[\\s]*11\\.
+Found : ProductVersion:	12.0.1
+
+
+1.1 Verify all Apple-provided software is current						Correct
+
