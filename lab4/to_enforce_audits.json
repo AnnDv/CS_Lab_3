@@ -1,0 +1,57 @@
+MacOS 11 is installed						Invalid
+Expected : ^ProductVersion[\\s]*:[\\s]*11\\.
+Found : ProductVersion:	12.0.1
+
+
+1.1 Verify all Apple-provided software is current						Correct
+
+Invalid
+Invalid
+Invalid
+Invalid
+Invalid
+Invalid
+Invalid
+Invalid
+2.1.1 Turn off Bluetooth, if no paired devices exist						Invalid
+Expected : Connectable: Yes
+Found : 
+
+Invalid
+2.2.1 Enable 'Set time and date automatically' - Set time and date automatically						Invalid
+Expected : Network Time:[\\s]*On
+Found : Network Time: On
+
+
+2.2.2 Ensure time set is within appropriate limits						Invalid
+Expected : ^[\\-\\+]?([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-6][0-9]|270)\\.([\\d]{1,6})[\\s]+\\+\\/\\-[\\s]+([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-6][0-9]|270)\\.([\\d]{1,6})[\\s]*$
+Found : 
+
+Invalid
+2.3.3 Familiarize users with screen lock tools or corner to Start Screen Saver						Invalid
+Expected : \".*-corner\"[\\s]*=[\\s]*(5|10);$
+Found :     "wvous-br-corner" = 14;
+
+
+2.4.1 Disable Remote Apple Events						Invalid
+Expected : ^Remote Apple Events:[\\s]*Off
+Found : Remote Apple Events: Off
+
+
+2.4.2 Disable Internet Sharing						Invalid
+Expected : pass
+Found : 
+
+2.4.3 Disable Screen Sharing						Invalid
+Expected : 1
+Found : 0
+
+
+2.4.4 Disable Printer Sharing						Correct
+
+2.4.5 Disable Remote Login						Invalid
+Expected : ^Remote[\\s]*Login:[\\s]*Off$
+Found : Remote Login: Off
+
+
+
